@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "99f71873-3738-4bdf-b84d-3d0283956d20",
+		"name": "nodejs-api-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18360946"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{server}}/api/v1/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Get one user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{server}}/api/v1/users/A10"
+			},
+			"response": []
+		},
+		{
+			"name": "Create a user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"first_nameA100\",\n    \"last_name\": \"last_nameA10\",\n    \"email\": \"first_nameA11@gmail.com\",\n    \"password\": \"passwordA10\",\n    \"birthday\": \"1910-04-12\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{server}}/api/v1/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Create a user Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"passwordA30\",\n    \"birthday\": \"1930-04-12\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{server}}/api/v1/users/A100"
+			},
+			"response": []
+		},
+		{
+			"name": "Deleting a user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{server}}/api/v1/users/A1"
+			},
+			"response": []
+		}
+	]
+}
